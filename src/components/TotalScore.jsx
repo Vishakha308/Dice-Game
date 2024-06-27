@@ -15,10 +15,10 @@ const ScoreContainer = styled.div`
 `
 
 
-const TotalScore = () => {
+const TotalScore = ({score}) => {
   return (
     <ScoreContainer>
-            <h1>0</h1>
+            <h1>{score}</h1>
             <p>Total Score</p>
     </ScoreContainer>
   )

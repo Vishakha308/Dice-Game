@@ -1,10 +1,16 @@
 import styled from "styled-components";
+import { useState } from "react";
 
-const RoleDice = () => {
+const RoleDice = ({roleDice, currentDice}) => {
+
+    
+
+
     return (
+
         <DiceContainer>
-            <div>
-                <img src="/images/dice/dice_1.png" alt="dice 1" srcset="" />
+            <div className="dice" onClick={roleDice}>
+                <img src={`/images/dice/dice_${currentDice}.png`} alt="dice 1" srcset="" />
             </div>
             <p>Click on Dice to Roll</p>
         </DiceContainer>
@@ -22,6 +28,10 @@ const DiceContainer = styled.div`
 
     p{
         font-size: 24px;
+    }
+    .dice{
+        cursor: pointer;
+
     }
 
 `
